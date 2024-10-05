@@ -1,0 +1,10 @@
+*
+!.github/
+!.gitignore
+!archetypes/
+!layouts/
+!static/
+!package.json
+!package-lock.json
+!.prettierrc
+!readme.md
