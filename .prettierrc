@@ -7,8 +7,7 @@
     {
       "files": ["*.html"],
       "options": {
-        "parser": "go-template",
-        "htmlWhitespaceSensitivity": "ignore"
+        "parser": "go-template"
       }
     }
   ]

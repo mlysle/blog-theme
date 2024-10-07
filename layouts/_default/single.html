@@ -1,19 +1,8 @@
 {{ define "main" }}
   <main>
-    <h1 class="p-name">{{ .Title }}</h1>
-
-    {{ if .Date }}
-      <div>
-        <b>
-          <time datetime="{{ .Date.Format "2006-01-02" }}">
-            {{ .Date.Format "Monday, January 2, 2006" }}
-          </time>
-          -
-          <a href="{{ .Permalink }}" class="u-url u-uid">Permalink</a>
-        </b>
-      </div>
-    {{ end }}
-
+    <h1>{{ .Title }}</h1>
+    {{ partial "post-header.html" . }}
     {{ .Content }}
+    {{ partial "taglist.html" . }}
   </main>
 {{ end }}

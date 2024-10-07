@@ -1,0 +1,19 @@
+<div class="post-date">
+  <p>
+    <time datetime="{{ .PublishDate.Format "2006-01-02" }}">
+      {{ .PublishDate.Format "January 2, 2006" }}
+    </time>
+  </p>
+  {{- if ne .Lastmod .PublishDate }}
+    <p>
+      (Last updated
+      <time datetime="{{ .Lastmod.Format "2006-01-02" }}">
+        {{ .Lastmod.Format "January 2, 2006" }})
+      </time>
+    </p>
+    <p>
+      <a href="{{ .Permalink }}" class="u-url u-uid">Permalink</a>
+    </p>
+  {{- end }}
+
+</div>

@@ -1,0 +1,8 @@
+{{- with .Params.tags -}}
+  <span class="tags">
+    Tags:
+    {{ range . }}
+      #<a href="">{{ . }}</a>
+    {{ end }}
+  </span>
+{{- end -}}

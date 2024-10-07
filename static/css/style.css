@@ -6,7 +6,7 @@
 body {
   color: #ebdbb2;
   background: var(--primary-bg-color);
-  font-size: 0.875rem;
+  font-size: 1.125rem;
   line-height: 1.5;
   font-family: monospace;
   max-width: 800px;
@@ -33,7 +33,6 @@ a:hover {
 .content {
   margin-bottom: 2rem;
 }
-
 /* NAVIGATION */
 
 .site-nav {
@@ -52,4 +51,10 @@ a.title {
   padding: 0;
   display: flex;
   gap: 1rem;
+}
+
+.post-date {
+  font-weight: bold;
+  font-size: 0.875rem;
+  line-height: 0.5;
 }
