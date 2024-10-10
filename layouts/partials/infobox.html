@@ -1,7 +1,0 @@
-<div class="infobox">
-  <h3>{{ .Get "title" }}</h3>
-  {{ $content := .Inner | split "\n" }}
-  {{ range $content }}
-    <p>{{ . | safeHTML }}</p>
-  {{ end }}
-</div>
