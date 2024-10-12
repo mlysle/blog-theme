@@ -2,7 +2,7 @@
   <span class="tags">
     Tags:
     {{ range . }}
-      #<a href="">{{ . }}</a>
+      #<a href="{{ "/tags/" | relURL }}{{ . | urlize }}">{{ . }}</a>
     {{ end }}
   </span>
 {{- end -}}
