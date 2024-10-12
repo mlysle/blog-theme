@@ -113,3 +113,14 @@ a.footnote-ref::before {
 a.footnote-ref::after {
   content: "]";
 }
+
+.anchor:link {
+  color: #ebdbb2;
+  opacity: 0.5;
+  text-decoration: none;
+}
+
+.anchor:hover {
+  color: var(--primary-color);
+  opacity: 1;
+}
