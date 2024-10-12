@@ -1,8 +1,10 @@
 <div class="infobox">
   <h3>{{ .Get "title" }}</h3>
-  {{- with trim .Inner "\n\r" }}
-    {{- range split . "\n" }}
-      <p>{{ . }}</p>
+  <ul>
+    {{- with trim .Inner "\n\r" }}
+      {{- range split . "\n" }}
+        <li>{{ . | markdownify }}</li>
+      {{- end }}
     {{- end }}
-  {{- end }}
+  </ul>
 </div>
