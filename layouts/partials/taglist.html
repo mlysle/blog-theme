@@ -1,8 +1,12 @@
 {{- with .Params.tags -}}
-  <span class="tags">
-    Tags:
-    {{ range . }}
-      #<a href="{{ "/tags/" | relURL }}{{ . | urlize }}">{{ . }}</a>
-    {{ end }}
-  </span>
+  {{- $tagsLen := len . -}}
+  {{- if gt $tagsLen 0 -}}
+    <span class="tags">
+      Tags:&nbsp
+      {{- range $k, $v := . -}}
+        <a href="{{ "/tags/" | relURL }}{{ $v | urlize }}">{{ $v }}</a>
+        {{- if lt $k (sub $tagsLen 1) }},&nbsp{{ end -}}
+      {{ end }}.
+    </span>
+  {{- end -}}
 {{- end -}}
